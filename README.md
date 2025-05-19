@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en-IN">
 <head>
     <meta charset="UTF-8">
@@ -193,132 +194,6 @@
             background: var(--secondary-color);
             color: white;
             transform: translateY(-3px);
-        }
-        
-        /* Tab Navigation */
-        .tab-navigation {
-            display: flex;
-            border-bottom: 1px solid #ddd;
-            margin-bottom: 30px;
-        }
-        
-        .tab-btn {
-            padding: 10px 20px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-weight: 600;
-            color: #666;
-            position: relative;
-        }
-        
-        .tab-btn.active {
-            color: var(--primary-color);
-        }
-        
-        .tab-btn.active::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--primary-color);
-        }
-        
-        .tab-content {
-            display: none;
-        }
-        
-        .tab-content.active {
-            display: block;
-        }
-        
-        /* Restaurant/Street Food/Recipe Cards */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .card-img {
-            height: 200px;
-            width: 100%;
-            object-fit: cover;
-        }
-        
-        .card-content {
-            padding: 20px;
-        }
-        
-        .card-title {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-        
-        .card-meta {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        .card-meta span {
-            margin-right: 15px;
-        }
-        
-        .card-meta i {
-            margin-right: 5px;
-            color: var(--primary-color);
-        }
-        
-        .card-rating {
-            color: var(--warning-color);
-            font-weight: 600;
-        }
-        
-        .card-price {
-            font-weight: 600;
-            color: var(--success-color);
-        }
-        
-        .card-excerpt {
-            margin-bottom: 15px;
-            font-size: 0.95rem;
-        }
-        
-        /* Recipe Specific Styles */
-        .recipe-meta {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 15px;
-        }
-        
-        .recipe-meta-item {
-            display: flex;
-            align-items: center;
-            margin-right: 20px;
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-        }
-        
-        .recipe-meta-item i {
-            margin-right: 5px;
-            color: var(--primary-color);
         }
         
         /* Main Content */
@@ -525,11 +400,6 @@
         .ad-space p {
             color: #666;
             margin-bottom: 10px;
-        }
-        
-        .ad-space-large {
-            padding: 30px;
-            margin: 40px 0;
         }
         
         /* Comments Section */
@@ -765,16 +635,6 @@
             .social-links {
                 justify-content: center;
             }
-            
-            .tab-navigation {
-                overflow-x: auto;
-                white-space: nowrap;
-                padding-bottom: 5px;
-            }
-            
-            .tab-btn {
-                padding: 10px 15px;
-            }
         }
         
         /* Animation */
@@ -801,7 +661,7 @@
             <nav id="mainNav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="restaurants.html" class="active">Restaurants</a></li>
+                    <li><a href="restaurants.html">Restaurants</a></li>
                     <li><a href="street-food.html">Street Food</a></li>
                     <li><a href="recipes.html">Recipes</a></li>
                     <li><a href="about.html">About</a></li>
@@ -824,213 +684,405 @@
     <main class="container main">
         <!-- Content Area -->
         <div class="content">
-            <!-- Tab Navigation -->
-            <div class="tab-navigation">
-                <button class="tab-btn active" data-tab="restaurants">Luxury Restaurants</button>
-                <button class="tab-btn" data-tab="street-food">Street Food</button>
-                <button class="tab-btn" data-tab="recipes">Recipes</button>
+            <!-- Featured Post -->
+            <article class="blog-post animated" id="featured">
+                <div class="post-header">
+                    <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Hyderabadi Biryani">
+                    <span class="post-category">Featured</span>
+                </div>
+                <div class="post-content">
+                    <h2 class="post-title">The Ultimate Guide to Hyderabadi Biryani: Top 10 Places to Try</h2>
+                    <div class="post-meta">
+                        <span><i class="far fa-user"></i> By Foodie Admin</span>
+                        <span><i class="far fa-calendar-alt"></i> June 15, 2023</span>
+                        <span><i class="far fa-comments"></i> 24 Comments</span>
+                    </div>
+                    <p class="post-excerpt">Hyderabadi Biryani is not just a dish, it's an emotion for the people of Hyderabad. After tasting over 50 different biryanis across the city, we've curated this list of the absolute best places to experience authentic Hyderabadi Biryani...</p>
+                    <a href="hyderabadi-biryani-guide.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+            
+            <!-- Ad Space (Top of Content) -->
+            <div class="ad-space">
+                <p>Advertisement</p>
+                <!-- Google AdSense Ad Unit -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+                <!-- Food Blog Top Banner -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                     data-ad-slot="XXXXXXXXXX"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             </div>
             
-            <!-- Restaurants Tab Content -->
-            <div id="restaurants" class="tab-content active">
-                <h2>Top Luxury Restaurants in Hyderabad</h2>
-                <p>Experience fine dining at its best with our curated list of Hyderabad's most luxurious restaurants</p>
+            <!-- Recent Posts -->
+            <article class="blog-post animated">
+                <div class="post-header">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Street Food in Hyderabad">
+                    <span class="post-category">Street Food</span>
+                </div>
+                <div class="post-content">
+                    <h2 class="post-title">Hidden Street Food Gems in Old Hyderabad</h2>
+                    <div class="post-meta">
+                        <span><i class="far fa-user"></i> By Street Food Explorer</span>
+                        <span><i class="far fa-calendar-alt"></i> June 10, 2023</span>
+                        <span><i class="far fa-comments"></i> 18 Comments</span>
+                    </div>
+                    <p class="post-excerpt">Old Hyderabad is a treasure trove of culinary delights waiting to be discovered. From the legendary Irani chai to the crispy Osmania biscuits, join us as we explore 15 must-try street food spots that even many locals don't know about...</p>
+                    <a href="old-hyderabad-street-food.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+            
+            <article class="blog-post animated">
+                <div class="post-header">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Fine Dining in Hyderabad">
+                    <span class="post-category">Fine Dining</span>
+                </div>
+                <div class="post-content">
+                    <h2 class="post-title">10 Best Fine Dining Restaurants in Hyderabad for a Special Night Out</h2>
+                    <div class="post-meta">
+                        <span><i class="far fa-user"></i> By Gourmet Guru</span>
+                        <span><i class="far fa-calendar-alt"></i> June 5, 2023</span>
+                        <span><i class="far fa-comments"></i> 12 Comments</span>
+                    </div>
+                    <p class="post-excerpt">Hyderabad's fine dining scene has exploded in recent years with world-class restaurants offering everything from authentic Indian royal cuisine to innovative global fusion. Whether you're celebrating an anniversary or just want to treat yourself, these are our top picks for an unforgettable dining experience...</p>
+                    <a href="fine-dining-hyderabad.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+            
+            <!-- Comments Section -->
+            <section class="comments-section animated">
+                <h3 class="comments-title">Leave a Comment</h3>
                 
-                <!-- Ad Space (Top of Content) -->
-                <div class="ad-space">
-                    <p>Advertisement</p>
-                    <!-- Google AdSense Ad Unit -->
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-                    <!-- Food Blog Top Banner -->
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                         data-ad-slot="XXXXXXXXXX"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                    <script>
-                         (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                <div class="comment-form">
+                    <form id="commentForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Comment</label>
+                            <textarea id="comment" name="comment" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Post Comment</button>
+                    </form>
                 </div>
                 
-                <div class="card-grid">
-                    <!-- Restaurant 1 -->
-                    <div class="card animated">
-                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Taj Falaknuma Palace" class="card-img">
-                        <div class="card-content">
-                            <h3 class="card-title">Taj Falaknuma Palace</h3>
-                            <div class="card-meta">
-                                <span><i class="fas fa-star"></i> <span class="card-rating">4.8</span>/5</span>
-                                <span><i class="fas fa-rupee-sign"></i> <span class="card-price">₹₹₹₹</span></span>
-                                <span><i class="fas fa-map-marker-alt"></i> Falaknuma</span>
-                            </div>
-                            <p class="card-excerpt">Dine like royalty in this stunning palace with authentic Nizami cuisine and impeccable service.</p>
-                            <a href="#" class="read-more">Read Review <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- Restaurant 2 -->
-                    <div class="card animated">
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ohri's Jiva Imperia" class="card-img">
-                        <div class="card-content">
-                            <h3 class="card-title">Ohri's Jiva Imperia</h3>
-                            <div class="card-meta">
-                                <span><i class="fas fa-star"></i> <span class="card-rating">4.6</span>/5</span>
-                                <span><i class="fas fa-rupee-sign"></i> <span class="card-price">₹₹₹</span></span>
-                                <span><i class="fas fa-map-marker-alt"></i> Jubilee Hills</span>
-                            </div>
-                            <p class="card-excerpt">Multi-cuisine fine dining with live music and an extensive wine selection.</p>
-                            <a href="#" class="read-more">Read Review <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- Restaurant 3 -->
-                    <div class="card animated">
-                        <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Kebabs & Kurries" class="card-img">
-                        <div class="card-content">
-                            <h3 class="card-title">Kebabs & Kurries</h3>
-                            <div class="card-meta">
-                                <span><i class="fas fa-star"></i> <span class="card-rating">4.7</span>/5</span>
-                                <span><i class="fas fa-rupee-sign"></i> <span class="card-price">₹₹₹</span></span>
-                                <span><i class="fas fa-map-marker-alt"></i> ITC Kohenur</span>
-                            </div>
-                            <p class="card-excerpt">Authentic North Indian and Hyderabadi cuisine with a modern twist.</p>
-                            <a href="#" class="read-more">Read Review <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- Restaurant 4 -->
-                    <div class="card animated">
-                        <img src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ministry of Barbeque" class="card-img">
-                        <div class="card-content">
-                            <h3 class="card-title">Ministry of Barbeque</h3>
-                            <div class="card-meta">
-                                <span><i class="fas fa-star"></i> <span class="card-rating">4.5</span>/5</span>
-                                <span><i class="fas fa-rupee-sign"></i> <span class="card-price">₹₹₹</span></span>
-                                <span><i class="fas fa-map-marker-alt"></i> Gachibowli</span>
-                            </div>
-                            <p class="card-excerpt">Premium buffet with live grills and unlimited barbecue options.</p>
-                            <a href="#" class="read-more">Read Review <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- Restaurant 5 -->
-                    <div class="card animated">
-                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="The Waterfront" class="card-img">
-                        <div class="card-content">
-                            <h3 class="card-title">The Waterfront</h3>
-                            <div class="card-meta">
-                                <span><i class="fas fa-star"></i> <span class="card-rating">4.4</span>/5</span>
-                                <span><i class="fas fa-rupee-sign"></i> <span class="card-price">₹₹₹₹</span></span>
-                                <span><i class="fas fa-map-marker-alt"></i> Necklace Road</span>
-                            </div>
-                            <p class="card-excerpt">Romantic fine dining with stunning views of Hussain Sagar lake.</p>
-                            <a href="#" class="read-more">Read Review <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- Restaurant 6 -->
-                    <div class="card animated">
-                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Flechazo" class="card-img">
-                        <div class="card-content">
-                            <h3 class="card-title">Flechazo</h3>
-                            <div class="card-meta">
-                                <span><i class="fas fa-star"></i> <span class="card-rating">4.6</span>/5</span>
-                                <span><i class="fas fa-rupee-sign"></i> <span class="card-price">₹₹₹</span></span>
-                                <span><i class="fas fa-map-marker-alt"></i> Banjara Hills</span>
-                            </div>
-                            <p class="card-excerpt">Premium North Indian cuisine with live music and elegant ambiance.</p>
-                            <a href="#" class="read-more">Read Review <i class="fas fa-arrow-right"></i></a>
-                        </div>
+                <h3 class="comments-title">Recent Comments</h3>
+                
+                <div class="comment">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="User" class="comment-avatar">
+                    <div class="comment-content">
+                        <h4 class="comment-author">Priya Sharma</h4>
+                        <span class="comment-date">June 14, 2023 at 3:45 PM</span>
+                        <p class="comment-text">Great article! I've tried 7 out of the 10 biryani places mentioned and completely agree with your rankings. Paradise is overrated compared to some of these hidden gems.</p>
                     </div>
                 </div>
                 
-                <!-- Ad Space (Middle of Content) -->
-                <div class="ad-space ad-space-large">
-                    <p>Advertisement</p>
-                    <!-- Google AdSense Ad Unit -->
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-                    <!-- Food Blog Middle Rectangle -->
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                         data-ad-slot="XXXXXXXXXX"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                    <script>
-                         (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                <div class="comment">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User" class="comment-avatar">
+                    <div class="comment-content">
+                        <h4 class="comment-author">Rahul Mehta</h4>
+                        <span class="comment-date">June 12, 2023 at 10:20 AM</span>
+                        <p class="comment-text">You missed the amazing biryani at Cafe Bahar! It's my personal favorite. Maybe include it in your next update?</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- About Widget -->
+            <div class="sidebar-widget animated">
+                <h3 class="widget-title">About Hyderabad Foodie</h3>
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="About Us" style="border-radius: 5px; margin-bottom: 15px;">
+                <p>Hyderabad Foodie is dedicated to exploring and sharing the best food experiences in Hyderabad. From street food to fine dining, we're passionate about everything this city has to offer.</p>
+            </div>
+            
+            <!-- Ad Space (Sidebar Top) -->
+            <div class="ad-space">
+                <p>Advertisement</p>
+                <!-- Google AdSense Ad Unit -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+                <!-- Sidebar Square Ad -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                     data-ad-slot="XXXXXXXXXX"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
+            <!-- Popular Posts -->
+            <div class="sidebar-widget animated">
+                <h3 class="widget-title">Popular Posts</h3>
+                <ul class="popular-posts">
+                    <li class="popular-post">
+                        <img src="https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" alt="Popular Post" class="popular-post-img">
+                        <div>
+                            <a href="#" class="popular-post-title">Best Cafés in Hyderabad for Coffee Lovers</a>
+                            <div class="popular-post-date">May 28, 2023</div>
+                        </div>
+                    </li>
+                    <li class="popular-post">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" alt="Popular Post" class="popular-post-img">
+                        <div>
+                            <a href="#" class="popular-post-title">10 Must-Try Street Foods Under ₹100</a>
+                            <div class="popular-post-date">May 20, 2023</div>
+                        </div>
+                    </li>
+                    <li class="popular-post">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" alt="Popular Post" class="popular-post-img">
+                        <div>
+                            <a href="#" class="popular-post-title">Rooftop Restaurants with Best City Views</a>
+                            <div class="popular-post-date">May 15, 2023</div>
+                        </div>
+                    </li>
+                    <li class="popular-post">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" alt="Popular Post" class="popular-post-img">
+                        <div>
+                            <a href="#" class="popular-post-title">Authentic Hyderabadi Haleem: Where to Find It</a>
+                            <div class="popular-post-date">May 10, 2023</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Categories -->
+            <div class="sidebar-widget animated">
+                <h3 class="widget-title">Categories</h3>
+                <ul class="categories-list">
+                    <li><a href="#">Biryani Specials <span>15</span></a></li>
+                    <li><a href="#">Street Food <span>28</span></a></li>
+                    <li><a href="#">Fine Dining <span>12</span></a></li>
+                    <li><a href="#">Cafés & Bakeries <span>18</span></a></li>
+                    <li><a href="#">Hyderabadi Recipes <span>24</span></a></li>
+                    <li><a href="#">Food Events <span>7</span></a></li>
+                </ul>
+            </div>
+            
+            <!-- Newsletter -->
+            <div class="sidebar-widget animated">
+                <h3 class="widget-title">Newsletter</h3>
+                <p>Subscribe to get weekly updates on the best food spots in Hyderabad!</p>
+                <form class="newsletter-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            
+            <!-- Ad Space (Sidebar Bottom) -->
+            <div class="ad-space">
+                <p>Advertisement</p>
+                <!-- Google AdSense Ad Unit -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+                <!-- Sidebar Vertical Ad -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                     data-ad-slot="XXXXXXXXXX"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </aside>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-widget">
+                <h3>About Hyderabad Foodie</h3>
+                <p>We're passionate about Hyderabad's diverse food culture and committed to bringing you the most authentic and delicious experiences.</p>
+                <div class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
                 </div>
             </div>
             
-            <!-- Street Food Tab Content -->
-            <div id="street-food" class="tab-content">
-                <h2>Best Street Food Spots in Hyderabad</h2>
-                <p>Explore the vibrant street food culture of Hyderabad with these must-visit spots</p>
-                
-                <!-- Ad Space (Top of Content) -->
-                <div class="ad-space">
-                    <p>Advertisement</p>
-                    <!-- Google AdSense Ad Unit -->
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-                    <!-- Food Blog Top Banner -->
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                         data-ad-slot="XXXXXXXXXX"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                    <script>
-                         (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+            <div class="footer-widget">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="restaurants.html">Restaurant Guides</a></li>
+                    <li><a href="street-food.html">Street Food Guides</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-widget">
+                <h3>Food Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Biryani</a></li>
+                    <li><a href="#">Haleem</a></li>
+                    <li><a href="#">Irani Chai</a></li>
+                    <li><a href="#">Kebabs</a></li>
+                    <li><a href="#">Desserts</a></li>
+                    <li><a href="#">Vegetarian</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-widget">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana, India</p>
+                <p><i class="fas fa-envelope"></i> contact@hyderabadfoodie.com</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Hyderabad Foodie. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const nav = document.getElementById('mainNav');
+            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+        });
+        
+        // Comment Form Submission
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const comment = document.getElementById('comment').value;
+            
+            // Create new comment element
+            const commentsSection = document.querySelector('.comments-section');
+            const newComment = document.createElement('div');
+            newComment.className = 'comment';
+            newComment.innerHTML = `
+                <img src="https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=random" alt="User" class="comment-avatar">
+                <div class="comment-content">
+                    <h4 class="comment-author">${name}</h4>
+                    <span class="comment-date">Just now</span>
+                    <p class="comment-text">${comment}</p>
                 </div>
+            `;
+            
+            // Insert new comment before the comment form
+            commentsSection.insertBefore(newComment, document.querySelector('.comment-form'));
+            
+            // Reset form
+            this.reset();
+            
+            // Show success message
+            alert('Thank you for your comment!');
+        });
+        
+        // Newsletter Form Submission
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing to our newsletter!');
+            this.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
                 
-                <div class="card-grid">
-                    <!-- Street Food 1 -->
-                    <div class="card animated">
-                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Shah Ghouse Cafe" class="card-img">
-                        <div class="card-content">
-                            <h3 class="card-title">Shah Ghouse Cafe</h3>
-                            <div class="card-meta">
-                                <span><i class="fas fa-star"></i> <span class="card-rating">4.5</span>/5</span>
-                                <span><i class="fas fa-rupee-sign"></i> <span class="card-price">₹</span></span>
-                                <span><i class="fas fa-map-marker-alt"></i> Toli Chowki</span>
-                            </div>
-                            <p class="card-excerpt">Famous for their haleem and biryani, open 24/7 with amazing flavors.</p>
-                            <a href="#" class="read-more">Read Review <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- Street Food 2 -->
-                    <div class="card animated">
-                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Nayab Hotel" class="card-img">
-                        <div class="card-content">
-                            <h3 class="card-title">Nayab Hotel</h3>
-                            <div class="card-meta">
-                                <span><i class="fas fa-star"></i> <span class="card-rating">4.3</span>/5</span>
-                                <span><i class="fas fa-rupee-sign"></i> <span class="card-price">₹</span></span>
-                                <span><i class="fas fa-map-marker-alt"></i> Old City</span>
-                            </div>
-                            <p class="card-excerpt">Legendary haleem during Ramadan and amazing kebabs year-round.</p>
-                            <a href="#" class="read-more">Read Review <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- Street Food 3 -->
-                    <div class="card animated">
-                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Pista House" class="card-img">
-                        <div class="card-content">
-                            <h3 class="card-title">Pista House</h3>
-                            <div class="card-meta">
-                                <span><i class="fas fa-star"></i> <span class="card-rating">4.4</span>/5</span>
-                                <span><i class="fas fa-rupee-sign"></i> <span class="card-price">₹</span></span>
-                                <span><i class="fas fa-map-marker-alt"></i> Nampally</span>
-                            </div>
-                            <p class="card-excerpt">The most famous haleem in Hyderabad with multiple outlets.</p>
-                            <a href="#" class="read-more">Read Review <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- Street Food 4 -->
-                    <div class="card animated">
-                        <img src="https
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Lazy loading for images
+        document.addEventListener('DOMContentLoaded', function() {
+            const lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
+            
+            if ('IntersectionObserver' in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove('lazy');
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
+        });
+        
+        // Add animation class to elements when they come into view
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.blog-post, .sidebar-widget');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.classList.add('animated');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+    
+    <!-- Schema Markup for Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.hyderabadfoodblog.com"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.hyderabadfoodblog.com/blog"
+      }]
+    }
+    </script>
+</body>
+</html>

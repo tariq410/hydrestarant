@@ -807,7 +807,7 @@
     <section class="featured-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Street Food Hotspots</h2>
+                <h2 class="section-title">old gems</h2>
                 <a href="street-food.html" class="view-all">View All</a>
             </div>
             

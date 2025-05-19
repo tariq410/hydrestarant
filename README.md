@@ -8,29 +8,19 @@
     <meta name="author" content="Hyderabad Food Guide">
     <meta name="geo.region" content="IN-TG">
     <meta name="geo.placename" content="Hyderabad">
-    
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://www.hyderabadfoodguide.com">
-    
-    <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Hyderabad Food Guide | Restaurants, Street Food & Recipes">
     <meta property="og:description" content="Discover the best food in Hyderabad - from luxury hotels to hidden street food gems and authentic recipes">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.hyderabadfoodguide.com">
     <meta property="og:image" content="https://www.hyderabadfoodguide.com/images/hyderabad-food-og.jpg">
     <meta property="og:site_name" content="Hyderabad Food Guide">
-    
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Hyderabad Food Guide | Restaurants, Street Food & Recipes">
     <meta name="twitter:description" content="Discover the best food in Hyderabad - from luxury hotels to hidden street food gems and authentic recipes">
     <meta name="twitter:image" content="https://www.hyderabadfoodguide.com/images/hyderabad-food-twitter.jpg">
-    
-    <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    
-    <!-- Structured Data / Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -44,13 +34,8 @@
       }
     }
     </script>
-    
     <title>Hyderabad Food Guide | Restaurants, Street Food & Recipes</title>
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Global Styles */
         :root {
             --primary-color: #FF6B6B;
             --secondary-color: #4ECDC4;
@@ -228,6 +213,40 @@
             cursor: pointer;
         }
         
+        /* Search Results */
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 0 0 5px 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 100;
+            display: none;
+        }
+
+        .search-result-item {
+            display: block;
+            padding: 10px 15px;
+            color: var(--text-color);
+            border-bottom: 1px solid #eee;
+        }
+
+        .search-result-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .search-result-type {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            margin-right: 10px;
+        }
+
         /* Ad Banner */
         .ad-banner {
             background-color: #f5f5f5;
@@ -582,6 +601,30 @@
             color: #bbb;
             font-size: 0.9rem;
         }
+
+        /* Loading States */
+        .loading {
+            position: relative;
+            min-height: 100px;
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            border: 3px solid rgba(0,0,0,0.1);
+            border-radius: 50%;
+            border-top-color: var(--primary-color);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
         
         /* Responsive Styles */
         @media (max-width: 992px) {
@@ -702,8 +745,9 @@
             <p>From legendary biryani spots to hidden street food gems, explore the best food experiences in the City of Pearls</p>
             
             <div class="search-box">
-                <input type="text" placeholder="Search for restaurants, street food or recipes...">
-                <button><i class="fas fa-search"></i></button>
+                <input type="text" id="mainSearch" placeholder="Search for restaurants, street food or recipes...">
+                <button onclick="performSearch()"><i class="fas fa-search"></i></button>
+                <div id="searchResults" class="search-results"></div>
             </div>
         </div>
     </section>
@@ -735,54 +779,8 @@
                 <a href="restaurants.html" class="view-all">View All</a>
             </div>
             
-            <div class="card-grid">
-                <!-- Restaurant Card 1 -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Paradise Restaurant">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Paradise Biryani</h3>
-                        <div class="card-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Secunderabad</span>
-                            <span><i class="fas fa-rupee-sign"></i> ₹₹₹</span>
-                        </div>
-                        <p class="card-excerpt">The legendary biryani that put Hyderabad on the culinary map. Must-try: Hyderabadi Dum Biryani.</p>
-                        <a href="paradise-biryani.html" class="btn">Read More</a>
-                    </div>
-                </div>
-                
-                <!-- Restaurant Card 2 -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Bawarchi Restaurant">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Bawarchi</h3>
-                        <div class="card-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> RTC Cross Roads</span>
-                            <span><i class="fas fa-rupee-sign"></i> ₹₹</span>
-                        </div>
-                        <p class="card-excerpt">Famous for its flavorful biryanis and generous portions. Don't miss their mutton biryani and mirchi ka salan.</p>
-                        <a href="bawarchi.html" class="btn">Read More</a>
-                    </div>
-                </div>
-                
-                <!-- Restaurant Card 3 -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1551218370-a5c8a333ed84?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ohri's Restaurant">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Ohri's Jiva Imperia</h3>
-                        <div class="card-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Banjara Hills</span>
-                            <span><i class="fas fa-rupee-sign"></i> ₹₹₹₹</span>
-                        </div>
-                        <p class="card-excerpt">Upscale dining with a mix of Indian and international cuisines. Perfect for special occasions.</p>
-                        <a href="ohris-jiva.html" class="btn">Read More</a>
-                    </div>
-                </div>
+            <div class="card-grid" id="featuredRestaurants">
+                <!-- Content loaded via JavaScript -->
             </div>
         </div>
     </section>
@@ -813,54 +811,8 @@
                 <a href="street-food.html" class="view-all">View All</a>
             </div>
             
-            <div class="card-grid">
-                <!-- Street Food Card 1 -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Irani Chai">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Irani Chai at Nimrah Café</h3>
-                        <div class="card-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Charminar</span>
-                            <span><i class="fas fa-rupee-sign"></i> ₹</span>
-                        </div>
-                        <p class="card-excerpt">The iconic Irani chai with Osmania biscuits is a must-try Hyderabad experience near Charminar.</p>
-                        <a href="nimrah-cafe.html" class="btn">Read More</a>
-                    </div>
-                </div>
-                
-                <!-- Street Food Card 2 -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Haleem">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Pista House Haleem</h3>
-                        <div class="card-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Nampally</span>
-                            <span><i class="fas fa-rupee-sign"></i> ₹₹</span>
-                        </div>
-                        <p class="card-excerpt">The best haleem in town, especially during Ramadan. Rich, flavorful and absolutely addictive.</p>
-                        <a href="pista-house.html" class="btn">Read More</a>
-                    </div>
-                </div>
-                
-                <!-- Street Food Card 3 -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab2445b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Kebabs">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Shah Ghouse Kebabs</h3>
-                        <div class="card-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Jubilee Hills</span>
-                            <span><i class="fas fa-rupee-sign"></i> ₹₹</span>
-                        </div>
-                        <p class="card-excerpt">Juicy, flavorful kebabs that melt in your mouth. The mutton seekh kebabs are legendary.</p>
-                        <a href="shah-ghouse.html" class="btn">Read More</a>
-                    </div>
-                </div>
+            <div class="card-grid" id="streetFoodSpots">
+                <!-- Content loaded via JavaScript -->
             </div>
         </div>
     </section>
@@ -881,81 +833,36 @@
             
             <div class="area-content active" id="central-content">
                 <h3>Best Restaurants & Street Food in Central Hyderabad</h3>
-                <ul class="area-list">
-                    <li><a href="#">Paradise Biryani - Secunderabad</a></li>
-                    <li><a href="#">Café Bahar - Basheerbagh</a></li>
-                    <li><a href="#">Shadab - High Court Road</a></li>
-                    <li><a href="#">Nimrah Café - Charminar</a></li>
-                    <li><a href="#">Pista House - Nampally</a></li>
-                    <li><a href="#">Grand Hotel - Abids</a></li>
-                    <li><a href="#">Bawarchi - RTC Cross Roads</a></li>
-                    <li><a href="#">Sarvi - Narayanguda</a></li>
-                    <li><a href="#">Shah Ghouse - Tolichowki</a></li>
-                    <li><a href="#">Hotel Shadab - Old City</a></li>
+                <ul class="area-list" id="central-list">
+                    <!-- Content loaded via JavaScript -->
                 </ul>
             </div>
             
             <div class="area-content" id="west-content">
                 <h3>Best Restaurants & Street Food in West Hyderabad</h3>
-                <ul class="area-list">
-                    <li><a href="#">Ohri's Jiva Imperia - Banjara Hills</a></li>
-                    <li><a href="#">Taj Krishna - Banjara Hills</a></li>
-                    <li><a href="#">Barbeque Nation - Jubilee Hills</a></li>
-                    <li><a href="#">Absolute Barbecue - Jubilee Hills</a></li>
-                    <li><a href="#">Chutneys - Banjara Hills</a></li>
-                    <li><a href="#">Eat India Company - Jubilee Hills</a></li>
-                    <li><a href="#">Mekong - Banjara Hills</a></li>
-                    <li><a href="#">The Fisherman's Wharf - Jubilee Hills</a></li>
-                    <li><a href="#">Ming's Court - Banjara Hills</a></li>
-                    <li><a href="#">Flechazo - Jubilee Hills</a></li>
+                <ul class="area-list" id="west-list">
+                    <!-- Content loaded via JavaScript -->
                 </ul>
             </div>
             
             <div class="area-content" id="east-content">
                 <h3>Best Restaurants & Street Food in East Hyderabad</h3>
-                <ul class="area-list">
-                    <li><a href="#">Ulavacharu - Uppal</a></li>
-                    <li><a href="#">Rayalaseema Ruchulu - LB Nagar</a></li>
-                    <li><a href="#">Kakatiya Mess - Vanasthalipuram</a></li>
-                    <li><a href="#">Nellore Venkateswara - Nagole</a></li>
-                    <li><a href="#">Kritunga - ECIL</a></li>
-                    <li><a href="#">Kamat Hotel - Habsiguda</a></li>
-                    <li><a href="#">Sri Kanya Tiffins - Tarnaka</a></li>
-                    <li><a href="#">Kalinga Restaurant - Ramanthapur</a></li>
-                    <li><a href="#">Nanking - Secunderabad</a></li>
-                    <li><a href="#">Kohinoor - Malkajgiri</a></li>
+                <ul class="area-list" id="east-list">
+                    <!-- Content loaded via JavaScript -->
                 </ul>
             </div>
             
             <div class="area-content" id="north-content">
                 <h3>Best Restaurants & Street Food in North Hyderabad</h3>
-                <ul class="area-list">
-                    <li><a href="#">Kamat Hotel - Secunderabad</a></li>
-                    <li><a href="#">Nanking - Secunderabad</a></li>
-                    <li><a href="#">Paradise - Secunderabad</a></li>
-                    <li><a href="#">Firdaus - Trimulgherry</a></li>
-                    <li><a href="#">Kritunga - Alwal</a></li>
-                    <li><a href="#">Taj Mahal Hotel - Secunderabad</a></li>
-                    <li><a href="#">Kalinga Restaurant - Bowenpally</a></li>
-                    <li><a href="#">Minerva Coffee Shop - Secunderabad</a></li>
-                    <li><a href="#">Mouzzam - Trimulgherry</a></li>
-                    <li><a href="#">Kohinoor - Malkajgiri</a></li>
+                <ul class="area-list" id="north-list">
+                    <!-- Content loaded via JavaScript -->
                 </ul>
             </div>
             
             <div class="area-content" id="south-content">
                 <h3>Best Restaurants & Street Food in South Hyderabad</h3>
-                <ul class="area-list">
-                    <li><a href="#">Shah Ghouse - Tolichowki</a></li>
-                    <li><a href="#">Pista House - Old City</a></li>
-                    <li><a href="#">Shadab - Old City</a></li>
-                    <li><a href="#">Bawarchi - RTC Cross Roads</a></li>
-                    <li><a href="#">Café Bahar - Mehdipatnam</a></li>
-                    <li><a href="#">Alhamdulillah - Tolichowki</a></li>
-                    <li><a href="#">Shahran - Tolichowki</a></li>
-                    <li><a href="#">Kamat Hotel - Mehdipatnam</a></li>
-                    <li><a href="#">Nimrah Café - Charminar</a></li>
-                    <li><a href="#">Grand Hotel - Abids</a></li>
+                <ul class="area-list" id="south-list">
+                    <!-- Content loaded via JavaScript -->
                 </ul>
             </div>
         </div>
@@ -969,28 +876,216 @@
                 <a href="recipes.html" class="view-all">View All</a>
             </div>
             
-            <div class="card-grid">
-                <!-- Recipe Card 1 -->
-                <div class="card recipe-card">
-                    <div class="recipe-badge">30 mins</div>
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Hyderabadi Biryani">
+            <div class="card-grid" id="featuredRecipes">
+                <!-- Content loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2 class="section-title">Get Weekly Food Updates</h2>
+            <p>Subscribe to our newsletter for the latest restaurant reviews, street food discoveries and exclusive recipes</p>
+            
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" id="subscriberEmail" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+                <div id="newsletterMessage"></div>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Comments Section -->
+    <section class="comments-section">
+        <div class="container">
+            <h2 class="section-title">Share Your Food Experiences</h2>
+            
+            <div class="comment-form">
+                <h3>Leave a Comment</h3>
+                <form id="commentForm">
+                    <input type="hidden" id="pageUrl" value="index.html">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Hyderabadi Dum Biryani</h3>
-                        <div class="card-meta">
-                            <span><i class="fas fa-utensils"></i> Main Course</span>
-                            <span><i class="fas fa-fire"></i> Medium</span>
-                        </div>
-                        <p class="card-excerpt">The world-famous Hyderabadi biryani with layers of fragrant rice and perfectly spiced meat, cooked to perfection using the dum method.</p>
-                        <a href="hyderabadi-biryani-recipe.html" class="btn">View Recipe</a>
+                    <div class="form-group">
+                        <label for="email">Email (will not be published)</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Your Comment</label>
+                        <textarea id="comment" name="comment" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Post Comment</button>
+                </form>
+            </div>
+            
+            <div class="comments-list" id="commentsContainer">
+                <!-- Comments loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Hyderabad Food Guide</h3>
+                    <p>Your ultimate resource for discovering the best food experiences in Hyderabad - from luxury hotels to hidden street food gems.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
-                <!-- Recipe Card 2 -->
-                <div class="card recipe-card">
-                    <div class="recipe-badge">2 hours</div>
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Haleem">
-                    </div>
-                    <div class
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="street-food.html">Street Food</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Popular Areas</h3>
+                    <ul>
+                        <li><a href="#">Banjara Hills</a></li>
+                        <li><a href="#">Jubilee Hills</a></li>
+                        <li><a href="#">Secunderabad</a></li>
+                        <li><a href="#">Charminar</a></li>
+                        <li><a href="#">Hitech City</a></li>
+                        <li><a href="#">Gachibowli</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, Hyderabad</li>
+                        <li><i class="fas fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fas fa-envelope"></i> info@hyderabadfoodguide.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Hyderabad Food Guide. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // Sample data for demonstration
+        const sampleData = {
+            restaurants: [
+                {
+                    id: 1,
+                    name: "Paradise Biryani",
+                    location: "Secunderabad",
+                    description: "The legendary biryani that put Hyderabad on the culinary map. Must-try: Hyderabadi Dum Biryani.",
+                    price_range: "₹₹₹",
+                    image_url: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                },
+                {
+                    id: 2,
+                    name: "Bawarchi",
+                    location: "RTC Cross Roads",
+                    description: "Famous for its flavorful biryanis and generous portions. Don't miss their mutton biryani and mirchi ka salan.",
+                    price_range: "₹₹",
+                    image_url: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                },
+                {
+                    id: 3,
+                    name: "Ohri's Jiva Imperia",
+                    location: "Banjara Hills",
+                    description: "Upscale dining with a mix of Indian and international cuisines. Perfect for special occasions.",
+                    price_range: "₹₹₹₹",
+                    image_url: "https://images.unsplash.com/photo-1551218370-a5c8a333ed84?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                }
+            ],
+            streetFood: [
+                {
+                    id: 1,
+                    name: "Irani Chai at Nimrah Café",
+                    location: "Charminar",
+                    description: "The iconic Irani chai with Osmania biscuits is a must-try Hyderabad experience near Charminar.",
+                    specialty: "Irani Chai & Osmania Biscuits",
+                    image_url: "https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                },
+                {
+                    id: 2,
+                    name: "Pista House Haleem",
+                    location: "Nampally",
+                    description: "The best haleem in town, especially during Ramadan. Rich, flavorful and absolutely addictive.",
+                    specialty: "Haleem",
+                    image_url: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                },
+                {
+                    id: 3,
+                    name: "Shah Ghouse Kebabs",
+                    location: "Jubilee Hills",
+                    description: "Juicy, flavorful kebabs that melt in your mouth. The mutton seekh kebabs are legendary.",
+                    specialty: "Kebabs",
+                    image_url: "https://images.unsplash.com/photo-1563379091339-03b21ab2445b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                }
+            ],
+            recipes: [
+                {
+                    id: 1,
+                    title: "Hyderabadi Dum Biryani",
+                    prep_time: "30 mins",
+                    difficulty: "Medium",
+                    description: "The world-famous Hyderabadi biryani with layers of fragrant rice and perfectly spiced meat, cooked to perfection using the dum method.",
+                    image_url: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                },
+                {
+                    id: 2,
+                    title: "Hyderabadi Haleem",
+                    prep_time: "2 hours",
+                    difficulty: "Difficult",
+                    description: "The rich, slow-cooked stew made with wheat, barley, lentils and meat that's a Ramadan specialty in Hyderabad.",
+                    image_url: "https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                },
+                {
+                    id: 3,
+                    title: "Authentic Irani Chai",
+                    prep_time: "20 mins",
+                    difficulty: "Easy",
+                    description: "The creamy, sweet tea that's a Hyderabad institution, best paired with Osmania biscuits.",
+                    image_url: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                }
+            ],
+            areaLists: {
+                central: [
+                    "Paradise Biryani - Secunderabad",
+                    "Café Bahar - Basheerbagh",
+                    "Shadab - High Court Road",
+                    "Nimrah Café - Charminar",
+                    "Pista House - Nampally",
+                    "Grand Hotel - Abids",
+                    "Bawarchi - RTC Cross Roads",
+                    "Sarvi - Narayanguda",
+                    "Shah Ghouse - Tolichowki",
+                    "Hotel Shadab - Old City"
+                ],
+                west: [
+                    "Ohri's Jiva Imperia - Banjara Hills",
+                    "Taj Krishna - Banjara Hills",
+                    "Barbeque Nation - Jubilee Hills",
+                    "Absolute Barbecue - Jubilee Hills",
+                    "Chutneys - Banjara Hills",
+                    "Eat India Company - Jubilee Hills",
+                    "Mekong - Banjara Hills",
+                    "The Fisherman's Wharf - Jubilee Hills",
+                    "Ming's Court - Banjara Hills",
+                    "Flechazo - Jubilee Hills

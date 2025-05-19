@@ -3,66 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Best food blog in Hyderabad featuring restaurant reviews, street food guides, and authentic Hyderabadi recipes">
-    <meta name="keywords" content="Hyderabad food, Hyderabadi biryani, best restaurants Hyderabad, street food Hyderabad, food blog India">
-    <meta name="author" content="Hyderabad Foodie">
+    <meta name="description" content="Hyderabad's ultimate food guide - Discover best restaurants, hotels, street food spots and authentic recipes from the City of Pearls">
+    <meta name="keywords" content="Hyderabad food, best restaurants Hyderabad, street food Hyderabad, Hyderabadi recipes, biryani, haleem, Irani chai, food blog India">
+    <meta name="author" content="Hyderabad Food Guide">
     <meta name="geo.region" content="IN-TG">
     <meta name="geo.placename" content="Hyderabad">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.hyderabadfoodblog.com">
+    <link rel="canonical" href="https://www.hyderabadfoodguide.com">
     
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Hyderabad Food Blog | Best Restaurants & Street Food Guide">
-    <meta property="og:description" content="Discover the best food in Hyderabad - from luxury dining to hidden street food gems">
+    <meta property="og:title" content="Hyderabad Food Guide | Restaurants, Street Food & Recipes">
+    <meta property="og:description" content="Discover the best food in Hyderabad - from luxury hotels to hidden street food gems and authentic recipes">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.hyderabadfoodblog.com">
-    <meta property="og:image" content="https://www.hyderabadfoodblog.com/images/og-image.jpg">
-    <meta property="og:site_name" content="Hyderabad Food Blog">
+    <meta property="og:url" content="https://www.hyderabadfoodguide.com">
+    <meta property="og:image" content="https://www.hyderabadfoodguide.com/images/hyderabad-food-og.jpg">
+    <meta property="og:site_name" content="Hyderabad Food Guide">
     
-    <!-- Twitter Card -->
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hyderabad Food Blog | Best Restaurants & Street Food Guide">
-    <meta name="twitter:description" content="Discover the best food in Hyderabad - from luxury dining to hidden street food gems">
-    <meta name="twitter:image" content="https://www.hyderabadfoodblog.com/images/twitter-card.jpg">
+    <meta name="twitter:title" content="Hyderabad Food Guide | Restaurants, Street Food & Recipes">
+    <meta name="twitter:description" content="Discover the best food in Hyderabad - from luxury hotels to hidden street food gems and authentic recipes">
+    <meta name="twitter:image" content="https://www.hyderabadfoodguide.com/images/hyderabad-food-twitter.jpg">
     
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     
-    <!-- Structured Data -->
+    <!-- Structured Data / Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Hyderabad Food Blog",
-      "url": "https://www.hyderabadfoodblog.com",
+      "name": "Hyderabad Food Guide",
+      "url": "https://www.hyderabadfoodguide.com",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://www.hyderabadfoodblog.com/search?q={search_term_string}",
+        "target": "https://www.hyderabadfoodguide.com/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
     </script>
     
-    <title>Hyderabad Food Blog | Best Restaurants & Street Food Guide</title>
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="preload" href="js/main.js" as="script">
+    <title>Hyderabad Food Guide | Restaurants, Street Food & Recipes</title>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* Global Styles */
         :root {
             --primary-color: #FF6B6B;
-            --secondary-color: #FFA07A;
-            --dark-color: #333;
-            --light-color: #f8f9fa;
-            --success-color: #28a745;
-            --warning-color: #ffc107;
-            --danger-color: #dc3545;
-            --max-width: 1200px;
+            --secondary-color: #4ECDC4;
+            --accent-color: #FFE66D;
+            --dark-color: #292F36;
+            --light-color: #F7FFF7;
+            --text-color: #333;
+            --text-light: #777;
         }
         
         * {
@@ -74,8 +70,8 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: var(--dark-color);
-            background-color: #f5f5f5;
+            color: var(--text-color);
+            background-color: var(--light-color);
         }
         
         a {
@@ -85,7 +81,7 @@
         }
         
         a:hover {
-            color: var(--secondary-color);
+            color: var(--dark-color);
         }
         
         img {
@@ -95,18 +91,53 @@
         
         .container {
             width: 100%;
-            max-width: var(--max-width);
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
         }
         
-        /* Header */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: var(--dark-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        /* Header Styles */
         header {
             background-color: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
         }
         
         .header-container {
@@ -123,7 +154,7 @@
         }
         
         .logo span {
-            color: var(--secondary-color);
+            color: var(--dark-color);
         }
         
         nav ul {
@@ -136,8 +167,8 @@
         }
         
         nav ul li a {
-            font-weight: 600;
             color: var(--dark-color);
+            font-weight: 500;
         }
         
         nav ul li a:hover {
@@ -146,329 +177,269 @@
         
         .mobile-menu-btn {
             display: none;
-            background: none;
-            border: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: var(--dark-color);
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
             color: white;
-            margin-bottom: 30px;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
+            text-align: center;
+            padding: 100px 20px;
         }
         
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 20px;
         }
         
         .hero p {
             font-size: 1.2rem;
-            margin-bottom: 30px;
+            max-width: 700px;
+            margin: 0 auto 30px;
         }
         
-        .btn {
-            display: inline-block;
-            background: var(--primary-color);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .btn:hover {
-            background: var(--secondary-color);
-            color: white;
-            transform: translateY(-3px);
-        }
-        
-        /* Main Content */
-        .main {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 30px 0;
-        }
-        
-        .content {
-            flex: 2;
-            min-width: 300px;
-            padding-right: 30px;
-        }
-        
-        .sidebar {
-            flex: 1;
-            min-width: 250px;
-        }
-        
-        /* Blog Posts */
-        .blog-post {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            margin-bottom: 30px;
-            overflow: hidden;
-        }
-        
-        .post-header {
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
             position: relative;
         }
         
-        .post-category {
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+        }
+        
+        .search-box button {
             position: absolute;
-            top: 15px;
-            left: 15px;
-            background: var(--primary-color);
+            right: 5px;
+            top: 5px;
+            background-color: var(--primary-color);
             color: white;
-            padding: 5px 10px;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        /* Ad Banner */
+        .ad-banner {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            margin: 30px 0;
             border-radius: 5px;
-            font-size: 0.8rem;
-            font-weight: 600;
         }
         
-        .post-content {
-            padding: 20px;
+        /* Featured Sections */
+        .featured-section {
+            padding: 60px 0;
         }
         
-        .post-title {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .post-meta {
+        .section-header {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            margin-bottom: 15px;
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        .post-meta span {
-            margin-right: 15px;
-        }
-        
-        .post-meta i {
-            margin-right: 5px;
-        }
-        
-        .post-excerpt {
-            margin-bottom: 20px;
-        }
-        
-        .read-more {
-            display: inline-block;
-            font-weight: 600;
-        }
-        
-        /* Sidebar */
-        .sidebar-widget {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            padding: 20px;
             margin-bottom: 30px;
         }
         
-        .widget-title {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--light-color);
+        .view-all {
             color: var(--primary-color);
+            font-weight: 500;
         }
         
-        .popular-posts {
-            list-style: none;
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
         }
         
-        .popular-post {
-            display: flex;
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
         
-        .popular-post:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
+        .card:hover {
+            transform: translateY(-10px);
         }
         
-        .popular-post-img {
-            width: 80px;
-            height: 60px;
+        .card-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .card-img img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            border-radius: 5px;
-            margin-right: 15px;
+            transition: transform 0.5s ease;
         }
         
-        .popular-post-title {
-            font-size: 0.9rem;
-            font-weight: 600;
+        .card:hover .card-img img {
+            transform: scale(1.1);
         }
         
-        .popular-post-date {
-            font-size: 0.8rem;
-            color: #666;
+        .card-content {
+            padding: 20px;
         }
         
-        .categories-list {
-            list-style: none;
-        }
-        
-        .categories-list li {
+        .card-title {
+            font-size: 1.2rem;
             margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
         }
         
-        .categories-list li:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-        
-        .categories-list a {
+        .card-meta {
             display: flex;
             justify-content: space-between;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .card-excerpt {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+        
+        /* Area Guide Section */
+        .area-guide {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .area-guide .section-title {
+            color: white;
+        }
+        
+        .area-guide .section-title::after {
+            background-color: var(--accent-color);
+        }
+        
+        .area-tabs {
+            display: flex;
+            margin-bottom: 30px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+        
+        .area-tab {
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-right: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        
+        .area-tab.active {
+            background-color: var(--primary-color);
+        }
+        
+        .area-content {
+            display: none;
+        }
+        
+        .area-content.active {
+            display: block;
+        }
+        
+        .area-list {
+            columns: 3;
+            column-gap: 30px;
+        }
+        
+        .area-list li {
+            margin-bottom: 10px;
+            break-inside: avoid;
+        }
+        
+        /* Recipe Section */
+        .recipe-card {
+            position: relative;
+        }
+        
+        .recipe-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--accent-color);
             color: var(--dark-color);
-        }
-        
-        .categories-list a:hover {
-            color: var(--primary-color);
-        }
-        
-        .categories-list span {
-            background: var(--light-color);
-            padding: 2px 8px;
-            border-radius: 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: 600;
             font-size: 0.8rem;
         }
         
-        /* Newsletter */
+        /* Newsletter Section */
+        .newsletter {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .newsletter .section-title {
+            color: white;
+        }
+        
+        .newsletter .section-title::after {
+            background-color: white;
+        }
+        
         .newsletter-form {
-            margin-top: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
         }
         
         .newsletter-form input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 1rem;
         }
         
         .newsletter-form button {
-            width: 100%;
-            padding: 10px;
-            background: var(--primary-color);
+            background-color: var(--dark-color);
             color: white;
             border: none;
-            border-radius: 5px;
-            font-weight: 600;
+            padding: 0 20px;
+            border-radius: 0 5px 5px 0;
             cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .newsletter-form button:hover {
-            background: var(--secondary-color);
-        }
-        
-        /* Ad Spaces */
-        .ad-space {
-            background: #f0f0f0;
-            border: 1px dashed #ccc;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 30px;
-            border-radius: 5px;
-        }
-        
-        .ad-space p {
-            color: #666;
-            margin-bottom: 10px;
         }
         
         /* Comments Section */
         .comments-section {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            padding: 20px;
-            margin-top: 30px;
-        }
-        
-        .comments-title {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-        }
-        
-        .comment {
-            display: flex;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .comment:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-        
-        .comment-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 15px;
-            object-fit: cover;
-        }
-        
-        .comment-content {
-            flex: 1;
-        }
-        
-        .comment-author {
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-        
-        .comment-date {
-            font-size: 0.8rem;
-            color: #666;
-            margin-bottom: 10px;
-        }
-        
-        .comment-text {
-            font-size: 0.95rem;
+            padding: 60px 0;
         }
         
         .comment-form {
-            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .comment-form h3 {
+            margin-bottom: 20px;
         }
         
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         
         .form-group label {
             display: block;
             margin-bottom: 5px;
-            font-weight: 600;
+            font-weight: 500;
         }
         
         .form-group input,
@@ -484,123 +455,190 @@
             min-height: 150px;
         }
         
-        /* Footer */
-        footer {
-            background: var(--dark-color);
-            color: white;
-            padding: 50px 0 20px;
+        .comments-list {
+            margin-top: 40px;
         }
         
-        .footer-container {
+        .comment {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        
-        .footer-widget {
-            flex: 1;
-            min-width: 250px;
             margin-bottom: 30px;
-            padding: 0 15px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
         }
         
-        .footer-widget h3 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: var(--primary-color);
+        .comment-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+            flex-shrink: 0;
         }
         
-        .footer-widget p {
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-            color: #bbb;
+        .comment-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
-        .footer-links {
-            list-style: none;
+        .comment-content {
+            flex: 1;
         }
         
-        .footer-links li {
+        .comment-meta {
+            display: flex;
+            justify-content: space-between;
             margin-bottom: 10px;
         }
         
-        .footer-links a {
-            color: #bbb;
-            transition: all 0.3s ease;
+        .comment-author {
+            font-weight: 600;
+            color: var(--dark-color);
         }
         
-        .footer-links a:hover {
-            color: var(--primary-color);
+        .comment-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .comment-text {
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: #bbb;
+        }
+        
+        .footer-col ul li a:hover {
+            color: white;
             padding-left: 5px;
         }
         
         .social-links {
             display: flex;
-            list-style: none;
-        }
-        
-        .social-links li {
-            margin-right: 15px;
+            margin-top: 20px;
         }
         
         .social-links a {
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 40px;
             height: 40px;
-            background: #444;
-            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            transition: all 0.3s ease;
+            margin-right: 10px;
+            color: white;
         }
         
         .social-links a:hover {
-            background: var(--primary-color);
-            transform: translateY(-3px);
+            background-color: var(--primary-color);
         }
         
         .copyright {
             text-align: center;
             padding-top: 20px;
-            margin-top: 20px;
-            border-top: 1px solid #444;
-            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #bbb;
+            font-size: 0.9rem;
         }
         
-        /* Pagination */
-        .pagination {
-            display: flex;
-            justify-content: center;
-            margin: 30px 0;
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .area-list {
+                columns: 2;
+            }
         }
         
-        .pagination a {
-            display: inline-block;
-            padding: 8px 15px;
-            margin: 0 5px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            color: var(--dark-color);
-        }
-        
-        .pagination a.active,
-        .pagination a:hover {
-            background: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
-        }
-        
-        /* Responsive Design */
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
                 text-align: center;
             }
             
-            nav ul {
+            nav {
                 margin-top: 20px;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-form input {
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            
+            .newsletter-form button {
+                border-radius: 5px;
+                padding: 15px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+                margin-top: 15px;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
                 flex-direction: column;
             }
             
@@ -608,43 +646,29 @@
                 margin: 5px 0;
             }
             
-            .mobile-menu-btn {
-                display: block;
-                position: absolute;
-                top: 20px;
-                right: 20px;
-            }
-            
-            .content {
-                padding-right: 0;
+            .hero {
+                padding: 80px 20px;
             }
             
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
-            .hero p {
-                font-size: 1rem;
+            .card-grid {
+                grid-template-columns: 1fr;
             }
             
-            .footer-widget {
-                flex: 100%;
-                text-align: center;
+            .area-list {
+                columns: 1;
             }
             
-            .social-links {
-                justify-content: center;
+            .comment {
+                flex-direction: column;
             }
-        }
-        
-        /* Animation */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .animated {
-            animation: fadeIn 0.5s ease forwards;
+            
+            .comment-avatar {
+                margin-bottom: 15px;
+            }
         }
     </style>
 </head>
@@ -652,13 +676,13 @@
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <a href="index.html" class="logo">Hyderabad<span>Foodie</span></a>
+            <a href="index.html" class="logo">Hyderabad<span>Food</span></a>
             
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <div class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
-            </button>
+            </div>
             
-            <nav id="mainNav">
+            <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="restaurants.html">Restaurants</a></li>
@@ -673,416 +697,300 @@
     
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Discover the Best Food in Hyderabad</h1>
-            <p>From luxury dining to hidden street food gems - your ultimate guide to Hyderabad's vibrant food scene</p>
-            <a href="#featured" class="btn">Explore Now</a>
+        <div class="container">
+            <h1>Discover Hyderabad's Culinary Treasures</h1>
+            <p>From legendary biryani spots to hidden street food gems, explore the best food experiences in the City of Pearls</p>
+            
+            <div class="search-box">
+                <input type="text" placeholder="Search for restaurants, street food or recipes...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
         </div>
     </section>
     
-    <!-- Main Content -->
-    <main class="container main">
-        <!-- Content Area -->
-        <div class="content">
-            <!-- Featured Post -->
-            <article class="blog-post animated" id="featured">
-                <div class="post-header">
-                    <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Hyderabadi Biryani">
-                    <span class="post-category">Featured</span>
-                </div>
-                <div class="post-content">
-                    <h2 class="post-title">The Ultimate Guide to Hyderabadi Biryani: Top 10 Places to Try</h2>
-                    <div class="post-meta">
-                        <span><i class="far fa-user"></i> By Foodie Admin</span>
-                        <span><i class="far fa-calendar-alt"></i> June 15, 2023</span>
-                        <span><i class="far fa-comments"></i> 24 Comments</span>
-                    </div>
-                    <p class="post-excerpt">Hyderabadi Biryani is not just a dish, it's an emotion for the people of Hyderabad. After tasting over 50 different biryanis across the city, we've curated this list of the absolute best places to experience authentic Hyderabadi Biryani...</p>
-                    <a href="hyderabadi-biryani-guide.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-            
-            <!-- Ad Space (Top of Content) -->
-            <div class="ad-space">
-                <p>Advertisement</p>
-                <!-- Google AdSense Ad Unit -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-                <!-- Food Blog Top Banner -->
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                     data-ad-slot="XXXXXXXXXX"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+    <!-- Ad Banner -->
+    <div class="container">
+        <div class="ad-banner">
+            <!-- Google AdSense Ad Unit -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+                 crossorigin="anonymous"></script>
+            <!-- Top Banner Ad -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+    
+    <!-- Featured Restaurants -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Restaurants</h2>
+                <a href="restaurants.html" class="view-all">View All</a>
             </div>
             
-            <!-- Recent Posts -->
-            <article class="blog-post animated">
-                <div class="post-header">
-                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Street Food in Hyderabad">
-                    <span class="post-category">Street Food</span>
-                </div>
-                <div class="post-content">
-                    <h2 class="post-title">Hidden Street Food Gems in Old Hyderabad</h2>
-                    <div class="post-meta">
-                        <span><i class="far fa-user"></i> By Street Food Explorer</span>
-                        <span><i class="far fa-calendar-alt"></i> June 10, 2023</span>
-                        <span><i class="far fa-comments"></i> 18 Comments</span>
+            <div class="card-grid">
+                <!-- Restaurant Card 1 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Paradise Restaurant">
                     </div>
-                    <p class="post-excerpt">Old Hyderabad is a treasure trove of culinary delights waiting to be discovered. From the legendary Irani chai to the crispy Osmania biscuits, join us as we explore 15 must-try street food spots that even many locals don't know about...</p>
-                    <a href="old-hyderabad-street-food.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-            
-            <article class="blog-post animated">
-                <div class="post-header">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Fine Dining in Hyderabad">
-                    <span class="post-category">Fine Dining</span>
-                </div>
-                <div class="post-content">
-                    <h2 class="post-title">10 Best Fine Dining Restaurants in Hyderabad for a Special Night Out</h2>
-                    <div class="post-meta">
-                        <span><i class="far fa-user"></i> By Gourmet Guru</span>
-                        <span><i class="far fa-calendar-alt"></i> June 5, 2023</span>
-                        <span><i class="far fa-comments"></i> 12 Comments</span>
-                    </div>
-                    <p class="post-excerpt">Hyderabad's fine dining scene has exploded in recent years with world-class restaurants offering everything from authentic Indian royal cuisine to innovative global fusion. Whether you're celebrating an anniversary or just want to treat yourself, these are our top picks for an unforgettable dining experience...</p>
-                    <a href="fine-dining-hyderabad.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-            
-            <!-- Comments Section -->
-            <section class="comments-section animated">
-                <h3 class="comments-title">Leave a Comment</h3>
-                
-                <div class="comment-form">
-                    <form id="commentForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                    <div class="card-content">
+                        <h3 class="card-title">Paradise Biryani</h3>
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Secunderabad</span>
+                            <span><i class="fas fa-rupee-sign"></i> ₹₹₹</span>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="comment">Comment</label>
-                            <textarea id="comment" name="comment" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Post Comment</button>
-                    </form>
-                </div>
-                
-                <h3 class="comments-title">Recent Comments</h3>
-                
-                <div class="comment">
-                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="User" class="comment-avatar">
-                    <div class="comment-content">
-                        <h4 class="comment-author">Priya Sharma</h4>
-                        <span class="comment-date">June 14, 2023 at 3:45 PM</span>
-                        <p class="comment-text">Great article! I've tried 7 out of the 10 biryani places mentioned and completely agree with your rankings. Paradise is overrated compared to some of these hidden gems.</p>
+                        <p class="card-excerpt">The legendary biryani that put Hyderabad on the culinary map. Must-try: Hyderabadi Dum Biryani.</p>
+                        <a href="paradise-biryani.html" class="btn">Read More</a>
                     </div>
                 </div>
                 
-                <div class="comment">
-                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User" class="comment-avatar">
-                    <div class="comment-content">
-                        <h4 class="comment-author">Rahul Mehta</h4>
-                        <span class="comment-date">June 12, 2023 at 10:20 AM</span>
-                        <p class="comment-text">You missed the amazing biryani at Cafe Bahar! It's my personal favorite. Maybe include it in your next update?</p>
+                <!-- Restaurant Card 2 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Bawarchi Restaurant">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Bawarchi</h3>
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> RTC Cross Roads</span>
+                            <span><i class="fas fa-rupee-sign"></i> ₹₹</span>
+                        </div>
+                        <p class="card-excerpt">Famous for its flavorful biryanis and generous portions. Don't miss their mutton biryani and mirchi ka salan.</p>
+                        <a href="bawarchi.html" class="btn">Read More</a>
                     </div>
                 </div>
-            </section>
-            
-            <!-- Pagination -->
-            <div class="pagination">
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#"><i class="fas fa-chevron-right"></i></a>
+                
+                <!-- Restaurant Card 3 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1551218370-a5c8a333ed84?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ohri's Restaurant">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Ohri's Jiva Imperia</h3>
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Banjara Hills</span>
+                            <span><i class="fas fa-rupee-sign"></i> ₹₹₹₹</span>
+                        </div>
+                        <p class="card-excerpt">Upscale dining with a mix of Indian and international cuisines. Perfect for special occasions.</p>
+                        <a href="ohris-jiva.html" class="btn">Read More</a>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <!-- About Widget -->
-            <div class="sidebar-widget animated">
-                <h3 class="widget-title">About Hyderabad Foodie</h3>
-                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="About Us" style="border-radius: 5px; margin-bottom: 15px;">
-                <p>Hyderabad Foodie is dedicated to exploring and sharing the best food experiences in Hyderabad. From street food to fine dining, we're passionate about everything this city has to offer.</p>
-            </div>
-            
-            <!-- Ad Space (Sidebar Top) -->
-            <div class="ad-space">
-                <p>Advertisement</p>
-                <!-- Google AdSense Ad Unit -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-                <!-- Sidebar Square Ad -->
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                     data-ad-slot="XXXXXXXXXX"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-            
-            <!-- Popular Posts -->
-            <div class="sidebar-widget animated">
-                <h3 class="widget-title">Popular Posts</h3>
-                <ul class="popular-posts">
-                    <li class="popular-post">
-                        <img src="https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" alt="Popular Post" class="popular-post-img">
-                        <div>
-                            <a href="#" class="popular-post-title">Best Cafés in Hyderabad for Coffee Lovers</a>
-                            <div class="popular-post-date">May 28, 2023</div>
-                        </div>
-                    </li>
-                    <li class="popular-post">
-                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" alt="Popular Post" class="popular-post-img">
-                        <div>
-                            <a href="#" class="popular-post-title">10 Must-Try Street Foods Under ₹100</a>
-                            <div class="popular-post-date">May 20, 2023</div>
-                        </div>
-                    </li>
-                    <li class="popular-post">
-                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" alt="Popular Post" class="popular-post-img">
-                        <div>
-                            <a href="#" class="popular-post-title">Rooftop Restaurants with Best City Views</a>
-                            <div class="popular-post-date">May 15, 2023</div>
-                        </div>
-                    </li>
-                    <li class="popular-post">
-                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" alt="Popular Post" class="popular-post-img">
-                        <div>
-                            <a href="#" class="popular-post-title">Authentic Hyderabadi Haleem: Where to Find It</a>
-                            <div class="popular-post-date">May 10, 2023</div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            
-            <!-- Categories -->
-            <div class="sidebar-widget animated">
-                <h3 class="widget-title">Categories</h3>
-                <ul class="categories-list">
-                    <li><a href="#">Biryani Specials <span>15</span></a></li>
-                    <li><a href="#">Street Food <span>28</span></a></li>
-                    <li><a href="#">Fine Dining <span>12</span></a></li>
-                    <li><a href="#">Cafés & Bakeries <span>18</span></a></li>
-                    <li><a href="#">Hyderabadi Recipes <span>24</span></a></li>
-                    <li><a href="#">Food Events <span>7</span></a></li>
-                </ul>
-            </div>
-            
-            <!-- Newsletter -->
-            <div class="sidebar-widget animated">
-                <h3 class="widget-title">Newsletter</h3>
-                <p>Subscribe to get weekly updates on the best food spots in Hyderabad!</p>
-                <form class="newsletter-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
-            
-            <!-- Ad Space (Sidebar Bottom) -->
-            <div class="ad-space">
-                <p>Advertisement</p>
-                <!-- Google AdSense Ad Unit -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-                <!-- Sidebar Vertical Ad -->
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                     data-ad-slot="XXXXXXXXXX"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-        </aside>
-    </main>
+    </section>
     
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-container">
-            <div class="footer-widget">
-                <h3>About Hyderabad Foodie</h3>
-                <p>We're passionate about Hyderabad's diverse food culture and committed to bringing you the most authentic and delicious experiences.</p>
-                <div class="social-links">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+    <!-- Mid-Page Ad Banner -->
+    <div class="container">
+        <div class="ad-banner">
+            <!-- Google AdSense Rectangle Ad -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+                 crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="fluid"
+                 data-ad-layout-key="-fb+5w+4e-db+86"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+    
+    <!-- Street Food Section -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Street Food Hotspots</h2>
+                <a href="street-food.html" class="view-all">View All</a>
+            </div>
+            
+            <div class="card-grid">
+                <!-- Street Food Card 1 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Irani Chai">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Irani Chai at Nimrah Café</h3>
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Charminar</span>
+                            <span><i class="fas fa-rupee-sign"></i> ₹</span>
+                        </div>
+                        <p class="card-excerpt">The iconic Irani chai with Osmania biscuits is a must-try Hyderabad experience near Charminar.</p>
+                        <a href="nimrah-cafe.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Street Food Card 2 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Haleem">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Pista House Haleem</h3>
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Nampally</span>
+                            <span><i class="fas fa-rupee-sign"></i> ₹₹</span>
+                        </div>
+                        <p class="card-excerpt">The best haleem in town, especially during Ramadan. Rich, flavorful and absolutely addictive.</p>
+                        <a href="pista-house.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Street Food Card 3 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab2445b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Kebabs">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Shah Ghouse Kebabs</h3>
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Jubilee Hills</span>
+                            <span><i class="fas fa-rupee-sign"></i> ₹₹</span>
+                        </div>
+                        <p class="card-excerpt">Juicy, flavorful kebabs that melt in your mouth. The mutton seekh kebabs are legendary.</p>
+                        <a href="shah-ghouse.html" class="btn">Read More</a>
+                    </div>
                 </div>
             </div>
-            
-            <div class="footer-widget">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="restaurants.html">Restaurant Guides</a></li>
-                    <li><a href="street-food.html">Street Food Guides</a></li>
-                    <li><a href="recipes.html">Recipes</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-widget">
-                <h3>Food Categories</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Biryani</a></li>
-                    <li><a href="#">Haleem</a></li>
-                    <li><a href="#">Irani Chai</a></li>
-                    <li><a href="#">Kebabs</a></li>
-                    <li><a href="#">Desserts</a></li>
-                    <li><a href="#">Vegetarian</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-widget">
-                <h3>Contact Info</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana, India</p>
-                <p><i class="fas fa-envelope"></i> contact@hyderabadfoodie.com</p>
-                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-            </div>
         </div>
-        
-        <div class="copyright">
-            <p>&copy; 2023 Hyderabad Foodie. All Rights Reserved.</p>
-        </div>
-    </footer>
+    </section>
     
-    <!-- JavaScript -->
-    <script>
-        // Mobile Menu Toggle
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-            const nav = document.getElementById('mainNav');
-            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-        });
-        
-        // Comment Form Submission
-        document.getElementById('commentForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+    <!-- Area Guide Section -->
+    <section class="area-guide">
+        <div class="container">
+            <h2 class="section-title">Food Guide by Area</h2>
+            <p>Explore the best dining options neighborhood by neighborhood</p>
             
-            // Get form values
-            const name = document.getElementById('name').value;
-            const comment = document.getElementById('comment').value;
+            <div class="area-tabs">
+                <div class="area-tab active" data-area="central">Central Hyderabad</div>
+                <div class="area-tab" data-area="west">West Hyderabad</div>
+                <div class="area-tab" data-area="east">East Hyderabad</div>
+                <div class="area-tab" data-area="north">North Hyderabad</div>
+                <div class="area-tab" data-area="south">South Hyderabad</div>
+            </div>
             
-            // Create new comment element
-            const commentsSection = document.querySelector('.comments-section');
-            const newComment = document.createElement('div');
-            newComment.className = 'comment';
-            newComment.innerHTML = `
-                <img src="https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=random" alt="User" class="comment-avatar">
-                <div class="comment-content">
-                    <h4 class="comment-author">${name}</h4>
-                    <span class="comment-date">Just now</span>
-                    <p class="comment-text">${comment}</p>
+            <div class="area-content active" id="central-content">
+                <h3>Best Restaurants & Street Food in Central Hyderabad</h3>
+                <ul class="area-list">
+                    <li><a href="#">Paradise Biryani - Secunderabad</a></li>
+                    <li><a href="#">Café Bahar - Basheerbagh</a></li>
+                    <li><a href="#">Shadab - High Court Road</a></li>
+                    <li><a href="#">Nimrah Café - Charminar</a></li>
+                    <li><a href="#">Pista House - Nampally</a></li>
+                    <li><a href="#">Grand Hotel - Abids</a></li>
+                    <li><a href="#">Bawarchi - RTC Cross Roads</a></li>
+                    <li><a href="#">Sarvi - Narayanguda</a></li>
+                    <li><a href="#">Shah Ghouse - Tolichowki</a></li>
+                    <li><a href="#">Hotel Shadab - Old City</a></li>
+                </ul>
+            </div>
+            
+            <div class="area-content" id="west-content">
+                <h3>Best Restaurants & Street Food in West Hyderabad</h3>
+                <ul class="area-list">
+                    <li><a href="#">Ohri's Jiva Imperia - Banjara Hills</a></li>
+                    <li><a href="#">Taj Krishna - Banjara Hills</a></li>
+                    <li><a href="#">Barbeque Nation - Jubilee Hills</a></li>
+                    <li><a href="#">Absolute Barbecue - Jubilee Hills</a></li>
+                    <li><a href="#">Chutneys - Banjara Hills</a></li>
+                    <li><a href="#">Eat India Company - Jubilee Hills</a></li>
+                    <li><a href="#">Mekong - Banjara Hills</a></li>
+                    <li><a href="#">The Fisherman's Wharf - Jubilee Hills</a></li>
+                    <li><a href="#">Ming's Court - Banjara Hills</a></li>
+                    <li><a href="#">Flechazo - Jubilee Hills</a></li>
+                </ul>
+            </div>
+            
+            <div class="area-content" id="east-content">
+                <h3>Best Restaurants & Street Food in East Hyderabad</h3>
+                <ul class="area-list">
+                    <li><a href="#">Ulavacharu - Uppal</a></li>
+                    <li><a href="#">Rayalaseema Ruchulu - LB Nagar</a></li>
+                    <li><a href="#">Kakatiya Mess - Vanasthalipuram</a></li>
+                    <li><a href="#">Nellore Venkateswara - Nagole</a></li>
+                    <li><a href="#">Kritunga - ECIL</a></li>
+                    <li><a href="#">Kamat Hotel - Habsiguda</a></li>
+                    <li><a href="#">Sri Kanya Tiffins - Tarnaka</a></li>
+                    <li><a href="#">Kalinga Restaurant - Ramanthapur</a></li>
+                    <li><a href="#">Nanking - Secunderabad</a></li>
+                    <li><a href="#">Kohinoor - Malkajgiri</a></li>
+                </ul>
+            </div>
+            
+            <div class="area-content" id="north-content">
+                <h3>Best Restaurants & Street Food in North Hyderabad</h3>
+                <ul class="area-list">
+                    <li><a href="#">Kamat Hotel - Secunderabad</a></li>
+                    <li><a href="#">Nanking - Secunderabad</a></li>
+                    <li><a href="#">Paradise - Secunderabad</a></li>
+                    <li><a href="#">Firdaus - Trimulgherry</a></li>
+                    <li><a href="#">Kritunga - Alwal</a></li>
+                    <li><a href="#">Taj Mahal Hotel - Secunderabad</a></li>
+                    <li><a href="#">Kalinga Restaurant - Bowenpally</a></li>
+                    <li><a href="#">Minerva Coffee Shop - Secunderabad</a></li>
+                    <li><a href="#">Mouzzam - Trimulgherry</a></li>
+                    <li><a href="#">Kohinoor - Malkajgiri</a></li>
+                </ul>
+            </div>
+            
+            <div class="area-content" id="south-content">
+                <h3>Best Restaurants & Street Food in South Hyderabad</h3>
+                <ul class="area-list">
+                    <li><a href="#">Shah Ghouse - Tolichowki</a></li>
+                    <li><a href="#">Pista House - Old City</a></li>
+                    <li><a href="#">Shadab - Old City</a></li>
+                    <li><a href="#">Bawarchi - RTC Cross Roads</a></li>
+                    <li><a href="#">Café Bahar - Mehdipatnam</a></li>
+                    <li><a href="#">Alhamdulillah - Tolichowki</a></li>
+                    <li><a href="#">Shahran - Tolichowki</a></li>
+                    <li><a href="#">Kamat Hotel - Mehdipatnam</a></li>
+                    <li><a href="#">Nimrah Café - Charminar</a></li>
+                    <li><a href="#">Grand Hotel - Abids</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Recipes Section -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Authentic Hyderabadi Recipes</h2>
+                <a href="recipes.html" class="view-all">View All</a>
+            </div>
+            
+            <div class="card-grid">
+                <!-- Recipe Card 1 -->
+                <div class="card recipe-card">
+                    <div class="recipe-badge">30 mins</div>
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Hyderabadi Biryani">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Hyderabadi Dum Biryani</h3>
+                        <div class="card-meta">
+                            <span><i class="fas fa-utensils"></i> Main Course</span>
+                            <span><i class="fas fa-fire"></i> Medium</span>
+                        </div>
+                        <p class="card-excerpt">The world-famous Hyderabadi biryani with layers of fragrant rice and perfectly spiced meat, cooked to perfection using the dum method.</p>
+                        <a href="hyderabadi-biryani-recipe.html" class="btn">View Recipe</a>
+                    </div>
                 </div>
-            `;
-            
-            // Insert new comment before the comment form
-            commentsSection.insertBefore(newComment, document.querySelector('.comment-form'));
-            
-            // Reset form
-            this.reset();
-            
-            // Show success message
-            alert('Thank you for your comment!');
-        });
-        
-        // Newsletter Form Submission
-        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for subscribing to our newsletter!');
-            this.reset();
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
                 
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Lazy loading for images
-        document.addEventListener('DOMContentLoaded', function() {
-            const lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
-            
-            if ('IntersectionObserver' in window) {
-                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            let lazyImage = entry.target;
-                            lazyImage.src = lazyImage.dataset.src;
-                            lazyImage.classList.remove('lazy');
-                            lazyImageObserver.unobserve(lazyImage);
-                        }
-                    });
-                });
-                
-                lazyImages.forEach(function(lazyImage) {
-                    lazyImageObserver.observe(lazyImage);
-                });
-            }
-        });
-        
-        // Add animation class to elements when they come into view
-        const animateOnScroll = function() {
-            const elements = document.querySelectorAll('.blog-post, .sidebar-widget');
-            
-            elements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.3;
-                
-                if (elementPosition < screenPosition) {
-                    element.classList.add('animated');
-                }
-            });
-        };
-        
-        window.addEventListener('scroll', animateOnScroll);
-        window.addEventListener('load', animateOnScroll);
-    </script>
-    
-    <!-- Schema Markup for Breadcrumb -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.hyderabadfoodblog.com"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Blog",
-        "item": "https://www.hyderabadfoodblog.com/blog"
-      }]
-    }
-    </script>
-</body>
-</html>
+                <!-- Recipe Card 2 -->
+                <div class="card recipe-card">
+                    <div class="recipe-badge">2 hours</div>
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Haleem">
+                    </div>
+                    <div class
